@@ -56,7 +56,7 @@
                 <br>
                 <label for="Rnumber">Numero #</label>
                 <br>
-                <input type="number" name="Rnumber" id="Rnumber" maxlength="5">
+                <input type="tel" name="Rnumber" id="Rnumber" maxlength="5">
                 <br>
                 <label for="Rcolonia">Colonia</label>
                 <br>
@@ -77,14 +77,14 @@
                 <label for="Rtelefono">Telefono (whatapp)</label>
                 <br>
                 <input type="tel" name="Rtelefono" id="Rtelefono" maxlength="10">
-                </form>
+                
 
                 <br><br>
                 <a href="#" onClick="MM_showHideLayers('Remitente','','hide','Destinatario','','show','shinjuku','','hide','roppongi','','hide')">Siguiente</a>
 
             </section>
             <section id="Destinatario">
-                <form action="/action_page.php" method="post">
+                
                     <h2>Destinatario</h2>
                 <label for="DFname">Nombre(s)</label>
                 <br>
@@ -125,10 +125,34 @@
                 <label for="Dtelefono">Telefono (whatapppp)</label>
                 <br>
                 <input type="tel" name="Dtelefono" id="Dtelefono" maxlength="10">
-                </form>
-
-                <a href="#" onClick="MM_showHideLayers('Remitente','','show','Destinatario','','hide','shinjuku','','hide','roppongi','','hide')">Siguiente</a>
                 
+
+                <a href="#" onClick="MM_showHideLayers('Remitente','','show','Destinatario','','hide','shinjuku','','hide','roppongi','','hide')">Atras</a>
+                <br>
+                <a href="#" onClick="MM_showHideLayers('Remitente','','hide','Destinatario','','hide','Paquete','','show','roppongi','','hide')">Siguiente</a>
+            </section>
+
+            <section id="Paquete">
+                <h2>Paquete</h2>
+                <label for="Peso">Peso</label>
+                <br>
+                <input type="number" name="Peso" id="Peso" maxlength="4">
+                <br>
+                <label for="largo">Largo</label>
+                <br>
+                <input type="number" name="largo" id="largo">
+                <br>
+                <label for="alto">Alto</label>
+                <br>
+                <input type="number" name="alto" id="alto">
+                <br>
+                <label for="ancho">Ancho</label>
+                <br>
+                <input type="number" name="ancho" id="ancho">
+
+                <a href="#" onClick="MM_showHideLayers('Remitente','','hide','Destinatario','','hide','Paquete','','show','roppongi','','hide')">Siguiente</a>
+
+                </form>
             </section>
             
         </article>

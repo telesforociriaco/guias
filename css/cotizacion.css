@@ -17,7 +17,7 @@ section#Remitente {
 	left: 100px;
 }
 
-section#Destinatario, section#shinjuku, section#roppongi {
+section#Destinatario, section#Paquete, section#roppongi {
 	width:760px;
 	height:500px;
 	background:#515151;
@@ -27,6 +27,6 @@ section#Destinatario, section#shinjuku, section#roppongi {
 	top: 50px;
 	left: 100px;
 }
-section#Destinatario, section#shinjuku, section#roppongi {
+section#Destinatario, section#Paquete, section#roppongi {
 	visibility:hidden;
 }
