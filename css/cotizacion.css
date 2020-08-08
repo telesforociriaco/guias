@@ -1,0 +1,32 @@
+#remitente , label{
+    
+    padding:10px;
+};
+main {
+	position:relative;
+}
+
+section#Remitente {
+	width:760px;
+	height:500px;
+	background:#515151;
+	padding:20px;
+	position:absolute;
+	z-index:1;
+	top: 50px;
+	left: 100px;
+}
+
+section#Destinatario, section#shinjuku, section#roppongi {
+	width:760px;
+	height:500px;
+	background:#515151;
+	padding:20px;
+	position:absolute;
+	z-index:auto;
+	top: 50px;
+	left: 100px;
+}
+section#Destinatario, section#shinjuku, section#roppongi {
+	visibility:hidden;
+}
