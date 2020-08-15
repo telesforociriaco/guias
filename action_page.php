@@ -31,42 +31,18 @@ if (!empty($RFname) || !empty($RLname1) || !empty($RLname2) || !empty($RStreet) 
         $host = "localhost";
         $dbUsername = "sergior9_testDb01";
         $dbPaswword = "Lolameras_123";
-        $dbname = "guia";
+        $dbname = "sergior9_testDb01";
 
         //fconexion
+$conn = mysqli_connect($host, $dbUsername, $dbPaswword) or die('nosepudo conctar' .mysql_error());
+    echo 'conexion exitosa';
+    mysqli_select_db($conn , $dbname) or die('nosepudo selecuinas' );
+     $sql = "INSERT INTO guia(RFname, RLname1, RLname2, RStreet, Rnumber, Rcolonia, Rcp, Rciudad, Restado, Rtelefono, DFname, DLname1, DLname2, DStreet, Dnumber, Dcolonia, Dcp, Dciudad, Destado, Dtelefono, Peso, largo, alto, ancho) VALUES ('".$RFname."', '".$RLname1."', '".$RLname2."', '".$RStreet."', '".$Rnumber."', '".$Rcolonia."', '".$Rcp."','".$Rciudad."', '".$Restado."', '".$Rtelefono."','".$DFname."','".$DLname1."','".$DLname2."', '".$DStreet."', '".$Dnumber."', '".$Dcolonia."', '".$Dcp."','".$Dciudad."', '".$Destado."', '".$Dtelefono."', '".$Peso."', '".$largo."', '".$alto."', '".$ancho."')";
+   var_dump($sql);
+    mysqli_query($conn, $sql);
+     echo "data inserted successfully";
 
-        $conn = new mysqli($host, $dbUsername, $dbPaswword, $dbname);
-
-        if (mysqli_connect_error()) {
-            
-            die('Conect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
-        } else {
-            $SELECT = "SELECT Rtelefono From guia Where Rtelefono = ? Limit 1";
-            $INSERT = "INSERT Into guias (RFname, RLname1, RLname2, RStreet, Rnumber, Rcolonia, Rcp, Rciudad, Restado, Rtelefono, DFname, DLname1, DLname2, DStreet, Dnumber, Dcolonia, Dcp, Dciudad, Destado, Dtelefono, Peso, largo, alto, ancho)"
-            
-
-            //Prepare statement
-            $stmt = $conn->prepare($SELECT);
-            $stmt->bind_param("i", $Rtelefono);
-            $stmt->execute();
-            $stmt->bind_result($Rtelefono);
-            $stmt->store_result();
-            $rnum = $stmt->num_rows;
-
-            if($rnum==0){
-                $stmt->close();
-
-                $stmt = $conn->prepare($INSERT);
-                $stmt->bind_param("ssssisississssisissiiiii",$RFname, $RLname1, $RLname2, $RStreet, $Rnumber, $Rcolonia, $Rcp, $Rciudad, $Restado, $Rtelefono, $DFname, $DLname1, $DLname2, $DStreet, $Dnumber, $Dcolonia, $Dcp, $Dciudad, $Destado, $Dtelefono, $Peso, $largo, $alto, $ancho)
-                $stmt->execute();
-                echo "New record inserted sucessfully"
-            }else{
-                echo "Some already register using this Remiente Number"
-            }
-            $stmt->close();
-            $conn->close();
-
-        }
+        
 } else {
     echo "All field are required";
     die();
