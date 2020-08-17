@@ -20,7 +20,7 @@ section#Remitente {
 section#Destinatario, section#Paquete, section#roppongi {
 	width:760px;
 	height:500px;
-	background:#515151;
+	background:#28c4f3;
 	padding:20px;
 	position:absolute;
 	z-index:auto;
@@ -29,4 +29,26 @@ section#Destinatario, section#Paquete, section#roppongi {
 }
 section#Destinatario, section#Paquete, section#roppongi {
 	visibility:hidden;
+}
+
+#menu li {
+	display: inline;
+	}
+	
+#menu li a {
+	font-family: Arial;
+	font-size: 25px;
+	text-decoration: none;
+	float: left;
+	padding: 2%;
+	background-color: #2175bc;
+	color: #fff;
+	}
+
+#menu li a:hover {
+	color: red;
+}
+
+.bg-light {
+    background-color: #fa7508!important;
 }
