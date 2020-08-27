@@ -1,0 +1,54 @@
+#remitente , label{
+    
+    padding:10px;
+};
+main {
+	position:relative;
+}
+
+section#Remitente {
+	width:760px;
+	height:500px;
+	background:#515151;
+	padding:20px;
+	position:absolute;
+	z-index:1;
+	top: 50px;
+	left: 100px;
+}
+
+section#Destinatario, section#Paquete, section#roppongi {
+	width:760px;
+	height:500px;
+	background:#28c4f3;
+	padding:20px;
+	position:absolute;
+	z-index:auto;
+	top: 50px;
+	left: 100px;
+}
+section#Destinatario, section#Paquete, section#roppongi {
+	visibility:hidden;
+}
+
+#menu li {
+	display: inline;
+	}
+	
+#menu li a {
+	font-family: Arial;
+	font-size: 25px;
+	text-decoration: none;
+	float: left;
+	padding: 2%;
+	background-color: #2175bc;
+	color: #fff;
+	}
+
+#menu li a:hover {
+	color: red;
+}
+
+.bg-light {
+    background-color: #fa7508!important;
+}

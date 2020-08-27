@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/cotizacion.css">
+    <title>Cotizacion</title>
+
+    <script type="text/javascript">
+        function MM_showHideLayers() { //v9.0
+          var i,p,v,obj,args=MM_showHideLayers.arguments;
+          for (i=0; i<(args.length-2); i+=3) 
+          with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+            if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+            obj.visibility=v; }
+        }
+    </script>
+</head>
+<body>
+    
+    <main>
+        <Section>
+            Publicidad
+        </Section>
+        <article>
+            <section id="Remitente">
+                <form action="./action_page.php" method="POST">
+                    <h2>Remitente</h2>
+                <label for="RFname">Nombre(s)</label>
+                <br>
+                <input type="text" name="RFname" id="RFname" maxlength="20">
+                <br>
+                <label for="RLname1">Primer Apellido</label>
+                <br>
+                <input type="text" name="RLname1" id="RLname1" maxlength="16">
+                <br>
+                <label for="RLname2">Segundo Apellido</label>
+                <br>
+                <input type="text" name="RLname2" id="RLname2" maxlength="16">
+                <br>
+                <label for="RStreet">Calle</label>
+                <br>
+                <input type="text" name="RStreet" id="RStreet" maxlength="16">
+                <br>
+                <label for="Rnumber">Numero #</label>
+                <br>
+                <input type="tel" name="Rnumber" id="Rnumber" maxlength="5">
+                <br>
+                <label for="Rcolonia">Colonia</label>
+                <br>
+                <input type="text" name="Rcolonia" id="Rcolonia" maxlength="30">
+                <br>
+                <label for="Rcp">Codigo Postal</label>
+                <br>
+                <input type="number" name="Rcp" id="Rcp" maxlength="5">
+                <br>
+                <label for="Rciudad">Ciudad</label>
+                <br>
+                <input type="text" name="Rciudad" id="Rciudad" maxlength="20">
+                <br>
+                <label for="Restado">Estado </label>
+                <br>
+                <input type="text" name="Restado" id="Restado" maxlength="16">
+                <br>
+                <label for="Rtelefono">Telefono (whatapp)</label>
+                <br>
+                <input type="tel" name="Rtelefono" id="Rtelefono" maxlength="10">
+                
+
+                <br><br>
+                <a href="#" onClick="MM_showHideLayers('Remitente','','hide','Destinatario','','show','shinjuku','','hide','roppongi','','hide')">Siguiente</a>
+
+            </section>
+            <section id="Destinatario">
+                
+                    <h2>Destinatario</h2>
+                <label for="DFname">Nombre(s)</label>
+                <br>
+                <input type="text" name="DFname" id="DFname" maxlength="20">
+                <br>
+                <label for="DLname1">Primer Apellido</label>
+                <br>
+                <input type="text" name="DLname1" id="DLname1" maxlength="16">
+                <br>
+                <label for="DLname2">Segundo Apellido</label>
+                <br>
+                <input type="text" name="DLname2" id="DLname2" maxlength="16">
+                <br>
+                <label for="DStreet">Calle</label>
+                <br>
+                <input type="text" name="DStreet" id="DStreet" maxlength="16">
+                <br>
+                <label for="Dnumber">Numero #</label>
+                <br>
+                <input type="tel" name="Dnumber" id="Dnumber" maxlength="5">
+                <br>
+                <label for="Dcolonia">Colonia</label>
+                <br>
+                <input type="text" name="Dcolonia" id="Dcolonia" maxlength="30">
+                <br>
+                <label for="Dcp">Codigo Postal</label>
+                <br>
+                <input type="number" name="Dcp" id="Dcp" maxlength="5">
+                <br>
+                <label for="Dciudad">Ciudad</label>
+                <br>
+                <input type="text" name="Dciudad" id="Dciudad" maxlength="20">
+                <br>
+                <label for="Destado">Estado </label>
+                <br>
+                <input type="text" name="Destado" id="Destado" maxlength="16">
+                <br>
+                <label for="Dtelefono">Telefono (whatapppp)</label>
+                <br>
+                <input type="tel" name="Dtelefono" id="Dtelefono" maxlength="10">
+                
+
+                <a href="#" onClick="MM_showHideLayers('Remitente','','show','Destinatario','','hide','shinjuku','','hide','roppongi','','hide')">Atras</a>
+                <br>
+                <a href="#" onClick="MM_showHideLayers('Remitente','','hide','Destinatario','','hide','Paquete','','show','roppongi','','hide')">Siguiente</a>
+            </section>
+
+            <section id="Paquete">
+                <h2>Paquete</h2>
+                <label for="Peso">Peso</label>
+                <br>
+                <input type="number" name="Peso" id="Peso" maxlength="4">
+                <br>
+                <label for="largo">Largo</label>
+                <br>
+                <input type="number" name="largo" id="largo">
+                <br>
+                <label for="alto">Alto</label>
+                <br>
+                <input type="number" name="alto" id="alto">
+                <br>
+                <label for="ancho">Ancho</label>
+                <br>
+                <input type="number" name="ancho" id="ancho">
+
+                <a href="#" onClick="MM_showHideLayers('Remitente','','hide','Destinatario','','hide','Paquete','','show','roppongi','','hide')">Siguiente</a>
+                <br>
+                <input type="submit" value="Enviar Cotizacion">
+                <br>
+                
+                </form>
+            </section>
+            <section>
+                <script src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
+                data-preference-id="332830792-229c34bf-3e21-46c6-99d9-72674941a3a9">
+</script>
+
+
+            </section>
+            
+        </article>
+
+        
+</main>
+    
+</body>
+</html>

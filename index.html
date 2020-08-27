@@ -3,59 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cotizacion</title>
+    <link rel="stylesheet" href="./css/cotizacion.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <title>Inicio</title>
 </head>
 <body>
     <header>
         <h1>
             Venta de guias
         </h1>
-        <nav>
-            <ol>
-                <li>Home</li>
-                <li>User</li>
-                <li>Quotation</li>
-                <li>About us</li>
-            </ol>
-        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
     </header>
-    <Section>
-        Publicidad
-    </Section>
-    <article>
-        <section id="Remitente">
-            <form action="/action_page.php" method="post">
-                <h2>Remitente</h2>
-            <label for="RFname">Nombre(s)</label>
-            <input type="text" name="RFname" id="RFname" maxlength="20">
-            <label for="RLname1">Primer Apellido</label>
-            <input type="text" name="RLname1" id="RLname1" maxlength="16">
-            <label for="RLname2">Segundo Apellido</label>
-            <input type="text" name="RLname2" id="RLname2" maxlength="16">
-            <br>
-            <label for="RStreet">Calle</label>
-            <input type="text" name="RStreet" id="RStreet" maxlength="16">
-            <br>
-            <label for="Rnumber">Numero #</label>
-            <input type="number" name="Rnumber" id="Rnumber" maxlength="5">
-            <br>
-            <label for="Rcolonia">Colonia</label>
-            <input type="text" name="Rcolonia" id="Rcolonia" maxlength="30">
-            <br>
-            <label for="Rcp">Codigo Postal</label>
-            <input type="number" name="Rcp" id="Rcp" maxlength="5">
-            <br>
-            <label for="Rciudad">Ciudad</label>
-            <input type="text" name="Rciudad" id="Rciudad" maxlength="20">
-            <br>
-            <label for="Restado">Estado</label>
-            <input type="text" name="Restado" id="Restado" maxlength="16">
-            <br>
-            <label for="Rtelefono">Telefono (whatapp)</label>
-            <input type="tel" name="Rtelefono" id="Rtelefono" maxlength="10">
-            </form>
-        </section>
-    </article>
-    
+    <main>
+
+    </main>
 </body>
 </html>
