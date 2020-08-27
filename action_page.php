@@ -23,6 +23,7 @@ $Peso = $_POST['Peso'];
 $largo = $_POST['largo'];
 $alto = $_POST['alto'];
 $ancho = $_POST['ancho'];
+$Folio = $_POST['Folio'];
 
 if (!empty($RFname) || !empty($RLname1) || !empty($RLname2) || !empty($RStreet) || !empty($Rnumber) || !empty($Rcolonia) || !empty($Rcp) || !empty($Rciudad)
     || !empty($Restado) || !empty($Rtelefono) || !empty($DFname) || !empty($DLname1) || !empty($DLname2) || !empty($DStreet) || !empty($Dnumber) || !empty($Dcolonia)
@@ -37,7 +38,7 @@ if (!empty($RFname) || !empty($RLname1) || !empty($RLname2) || !empty($RStreet) 
 $conn = mysqli_connect($host, $dbUsername, $dbPaswword) or die('nosepudo conctar' .mysql_error());
     echo 'conexion exitosa';
     mysqli_select_db($conn , $dbname) or die('nosepudo selecuinas' );
-     $sql = "INSERT INTO guia(RFname, RLname1, RLname2, RStreet, Rnumber, Rcolonia, Rcp, Rciudad, Restado, Rtelefono, DFname, DLname1, DLname2, DStreet, Dnumber, Dcolonia, Dcp, Dciudad, Destado, Dtelefono, Peso, largo, alto, ancho) VALUES ('".$RFname."', '".$RLname1."', '".$RLname2."', '".$RStreet."', '".$Rnumber."', '".$Rcolonia."', '".$Rcp."','".$Rciudad."', '".$Restado."', '".$Rtelefono."','".$DFname."','".$DLname1."','".$DLname2."', '".$DStreet."', '".$Dnumber."', '".$Dcolonia."', '".$Dcp."','".$Dciudad."', '".$Destado."', '".$Dtelefono."', '".$Peso."', '".$largo."', '".$alto."', '".$ancho."')";
+     $sql = "INSERT INTO guia(RFname, RLname1, RLname2, RStreet, Rnumber, Rcolonia, Rcp, Rciudad, Restado, Rtelefono, DFname, DLname1, DLname2, DStreet, Dnumber, Dcolonia, Dcp, Dciudad, Destado, Dtelefono, Peso, largo, alto, ancho, Folio) VALUES ('".$RFname."', '".$RLname1."', '".$RLname2."', '".$RStreet."', '".$Rnumber."', '".$Rcolonia."', '".$Rcp."','".$Rciudad."', '".$Restado."', '".$Rtelefono."','".$DFname."','".$DLname1."','".$DLname2."', '".$DStreet."', '".$Dnumber."', '".$Dcolonia."', '".$Dcp."','".$Dciudad."', '".$Destado."', '".$Dtelefono."', '".$Peso."', '".$largo."', '".$alto."', '".$ancho."','".$Folio."')";
    var_dump($sql);
     mysqli_query($conn, $sql);
      echo "data inserted successfully";

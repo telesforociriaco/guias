@@ -7,6 +7,34 @@
     <title>Cotizacion</title>
 
     <script type="text/javascript">
+        function Final() {
+            
+            
+            Folio();
+            MM_showHideLayers();
+
+        }
+        
+        function Folio(){
+            var aLetras = new Array('A', 'B', 'C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z');
+            var aNumeros = new Array('1', '2', '3','4','5','6','7','8','9','0');
+            var cLetra = "";
+            var cNumero = "";
+            var creado = "";
+    
+            for (let index = 0; index < 3; index++) {
+
+            cLetra = aLetras[Math.floor(Math.random()*aLetras.length)];
+            cNumero = aNumeros[Math.floor(Math.random()*aNumeros.length)];
+            creado += cLetra+cNumero;   
+            }
+    
+            
+            cajaCombinada = document.getElementById("Folio");
+            cajaCombinada.value = creado;
+            console.log(cajaCombinada.value);
+        }
+
         function MM_showHideLayers() { //v9.0
           var i,p,v,obj,args=MM_showHideLayers.arguments;
           for (i=0; i<(args.length-2); i+=3) 
@@ -115,7 +143,7 @@
                 <input type="tel" name="Dtelefono" id="Dtelefono" maxlength="10">
                 
 
-                <a href="#" onClick="MM_showHideLayers('Remitente','','show','Destinatario','','hide','shinjuku','','hide','roppongi','','hide')">Atras</a>
+                <a href="#" onClick="Folio()">Folio</a>
                 <br>
                 <a href="#" onClick="MM_showHideLayers('Remitente','','hide','Destinatario','','hide','Paquete','','show','roppongi','','hide')">Siguiente</a>
             </section>
@@ -137,6 +165,9 @@
                 <label for="ancho">Ancho</label>
                 <br>
                 <input type="number" name="ancho" id="ancho">
+                <br>
+                <input type="text" name="Folio" id="Folio" style="visibility: hidden;">
+
 
                 <a href="#" onClick="MM_showHideLayers('Remitente','','hide','Destinatario','','hide','Paquete','','show','roppongi','','hide')">Siguiente</a>
                 <br>
